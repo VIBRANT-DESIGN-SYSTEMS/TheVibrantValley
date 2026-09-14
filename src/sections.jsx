@@ -32,13 +32,17 @@ export function Hero({ onBookClick }) {
       id="top"
       className="relative min-h-screen w-full overflow-hidden bg-[#1B3022] grain-overlay"
     >
-      <div className="absolute inset-0 flex items-center justify-center">
-        <Img
-          src={IMAGES.hero}
-          alt="Dawn over the Gujarat plains near Velavadar with a Blackbuck in the distance"
-          fittingType="fit"
-        />
-      </div>
+     <div className="absolute inset-0">
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover"
+  >
+  <source src="/home-video.mp4" type="video/mp4" />
+  </video>
+</div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#1B3022]/45 via-[#1B3022]/35 to-[#1B3022]/75" />
       <div className="absolute left-6 md:left-10 top-0 bottom-0 vertical-rule hidden md:block" />
 
