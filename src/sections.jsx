@@ -33,8 +33,9 @@ export function Hero({ onBookClick }) {
       className="relative min-h-screen w-full overflow-hidden bg-[#1B3022] grain-overlay"
     >
      <div className="absolute inset-0">
- <video
-  controls
+<video
+  autoPlay
+  muted
   loop
   playsInline
   className="w-full h-full object-cover"
