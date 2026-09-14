@@ -44,8 +44,6 @@ export function Hero({ onBookClick }) {
 </video>
 </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#1B3022]/45 via-[#1B3022]/35 to-[#1B3022]/75" />
-      <div className="absolute left-6 md:left-10 top-0 bottom-0 vertical-rule hidden md:block" />
-
       <div className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-10 lg:px-20 max-w-[1400px] mx-auto pt-28 pb-32">
         <div className="reveal in-view mb-6">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F5F2E8]/12 backdrop-blur-md border border-[#F5F2E8]/25 text-[#F5F2E8]">
