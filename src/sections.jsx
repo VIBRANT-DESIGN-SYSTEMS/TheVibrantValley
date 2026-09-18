@@ -35,10 +35,17 @@ export function Hero({ onBookClick }) {
      <div className="absolute inset-0">
 <video
   autoPlay
-  muted
   loop
   playsInline
   className="w-full h-full object-cover"
+  onCanPlay={(e) => {
+    e.currentTarget.muted = false;
+    e.currentTarget.volume = 1;
+    e.currentTarget.play().catch(() => {
+      e.currentTarget.muted = true;
+      e.currentTarget.play();
+    });
+  }}
 >
   <source src="/home-video.mp4" type="video/mp4" />
 </video>
