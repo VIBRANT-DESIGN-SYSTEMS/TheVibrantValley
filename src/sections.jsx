@@ -25,45 +25,14 @@ import {
 } from "./data";
 
 /* ------------------------------------------------------------------ Hero */
-import { useEffect, useRef } from "react";
-
-export function Hero() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const enableAudio = () => {
-      const video = videoRef.current;
-      if (!video) return;
-
-      video.muted = false;
-      video.volume = 1;
-
-      video.play().catch(() => {});
-
-      window.removeEventListener("click", enableAudio);
-      window.removeEventListener("touchstart", enableAudio);
-      window.removeEventListener("scroll", enableAudio);
-    };
-
-    window.addEventListener("click", enableAudio);
-    window.addEventListener("touchstart", enableAudio);
-    window.addEventListener("scroll", enableAudio);
-
-    return () => {
-      window.removeEventListener("click", enableAudio);
-      window.removeEventListener("touchstart", enableAudio);
-      window.removeEventListener("scroll", enableAudio);
-    };
-  }, []);
-
+export function Hero({ onBookClick }) {
   return (
     <section
       id="top"
-      className="relative min-h-screen w-full overflow-hidden bg-[#1B3022]"
+      className="relative min-h-screen w-full overflow-hidden bg-[#1B3022] grain-overlay"
     >
       <div className="absolute inset-0">
         <video
-          ref={videoRef}
           autoPlay
           muted
           loop
@@ -72,12 +41,6 @@ export function Hero() {
         >
           <source src="/home-video.mp4" type="video/mp4" />
         </video>
-      </div>
-
-      {/* તમારો existing hero content અહીં રહેશે */}
-    </section>
-  );
-}
 </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#1B3022]/45 via-[#1B3022]/35 to-[#1B3022]/75" />
       <div className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-10 lg:px-20 max-w-[1400px] mx-auto pt-28 pb-32">
