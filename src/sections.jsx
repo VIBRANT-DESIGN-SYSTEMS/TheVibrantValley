@@ -160,12 +160,12 @@ export function Overview({ onBookClick }) {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="relative mt-14 md:mt-20 aspect-[16/10] w-full overflow-hidden">
-            <Img
-              src={IMAGES.masterplan}
-              alt="Vibrant Valley master plan — farmhouses, clubhouse, swimming pool, lotus lake and adventure activities"
-              fittingType="fill"
-            />
+         <div className="relative mt-14 md:mt-20 w-full overflow-hidden">
+  <img
+    src={IMAGES.masterplan}
+    alt="Vibrant Valley master plan – farmhouses, clubhouse, swimming pool, lotus lake and adventure activities"
+    className="block w-full h-auto"
+  />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1B3022]/55 via-transparent to-[#1B3022]/20 rounded" />
             {MASTERPLAN_PINS.map((pin, i) => (
               <span
