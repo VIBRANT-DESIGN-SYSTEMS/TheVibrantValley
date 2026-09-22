@@ -366,12 +366,13 @@ export const FOOTER_LINKS = [
 ];
 
 export const CONTACT = {
-  phone: "9737555499",
+  phone: "+91 97375 55499",
+  email: "kunal@thevibrantvalley.com",
   website: "https://www.TheVibrantValley.com",
   websiteLabel: "www.TheVibrantValley.com",
   location: "Velavadar Blackbuck Century, Gujarat",
   // Where booking-form leads are POSTed as JSON. Set VITE_LEAD_ENDPOINT in a .env
   // file (any form backend, CRM webhook or serverless function). While this is
   // empty the form just shows the confirmation screen and sends nothing.
-  leadEndpoint: import.meta.env.VITE_LEAD_ENDPOINT || "",
+  leadEndpoint: "https://formspree.io/f/mdekgwlk",
 };
