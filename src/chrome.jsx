@@ -307,7 +307,10 @@ export function BookingModal({ open, onClose }) {
     try {
       const res = await fetch(CONTACT.leadEndpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+       headers: {
+  "Content-Type": "application/json",
+  "Accept": "application/json",
+},
         body: JSON.stringify({ ...form, source: "vibrantvalley.com" }),
       });
       if (!res.ok) throw new Error(`Request failed (${res.status})`);
