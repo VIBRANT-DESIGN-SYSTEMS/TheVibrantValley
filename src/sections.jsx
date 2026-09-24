@@ -34,7 +34,7 @@ export function Hero({ onBookClick }) {
       <div className="absolute inset-0">
         <video
           autoPlay
-          unmuted
+          
           loop
           playsInline
           className="w-full h-full object-cover"
